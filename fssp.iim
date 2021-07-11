@@ -4,5 +4,9 @@ URL GOTO=https://fssp.gov.ru/torgi
 TAG POS=1 TYPE=SELECT FORM=ID:torgi-form ATTR=NAME:torgi[region] CONTENT=%5000000000000
 WAIT SECONDS=2
 TAG POS=1 TYPE=SELECT FORM=ID:torgi-form ATTR=NAME:torgi[city] CONTENT=%5000002800000
+TAG POS=1 TYPE=P ATTR=TXT:Тип<SP>имущества
+TAG POS=1 TYPE=LABEL FORM=ID:torgi-form ATTR=TXT:Квартира<SP>или<SP>часть<SP>квартиры
+TAG POS=23 TYPE=INPUT:CHECKBOX FORM=ID:torgi-form ATTR=NAME:torgi[propertytype][] CONTENT=YES
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:torgi-form ATTR=NAME:torgi[startprice][from] CONTENT=3000000
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:torgi-form ATTR=NAME:torgi[torgexpiredate][from] CONTENT={{!NOW:dd.mm.yyyy}}
 TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:torgi-form ATTR=*
